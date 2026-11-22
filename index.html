@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WIGEON PRODUCTIONS — Producción Musical Pop, R&amp;B, Funk &amp; Jazz</title>
+  <meta name="description" content="WIGEON PRODUCTIONS — Producción musical, mezcla, mastering y bajo en vivo para Pop, R&B, Funk y Jazz. Ingeniero de sonido y músico. Remoto mundial (ES/EN) y Zipaquirá / Bogotá." />
+
+  <!-- Open Graph para compartir por WhatsApp / Instagram -->
+  <meta property="og:title" content="WIGEON PRODUCTIONS — Pop, R&B, Funk & Jazz Music Production" />
+  <meta property="og:description" content="Transformo tus ideas y notas de voz en canciones listas para Spotify con groove real, armonía sólida e ingeniería limpia." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#101010" />
+
+  <!-- Google Fonts: Tipografía editorial fiel al ADN de WIGEON -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navegación fija -->
+  <header class="site-header" id="top">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="WIGEON PRODUCTIONS Home">
+        <span class="brand-mark" aria-hidden="true">
+          <!-- Emblema minimalista inspirado en el ícono original de WIGEON -->
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="64" height="64" rx="10" fill="#F4F1EC"/>
+            <path d="M24 14L27.5 23.5L35 16L37.5 25C41 26.5 44.5 28.5 46.5 31C42.5 31.8 39.2 31.4 37.5 30.8C37.2 34.5 35.5 38 35.5 41.5C35.5 45.8 39 48.2 43.2 48.8C40 51.4 34 52 28.2 51.8C21.8 51.6 17.5 48.2 17.5 42.2C17.5 36.2 21.5 33.2 24 30.2C23.2 26.5 22.8 20.5 24 14Z" fill="#121212"/>
+            <path d="M18.5 46.5C14.8 45.2 13.8 40.5 15.8 35.5C16.8 33 17.4 31.5 16 29.8" stroke="#121212" stroke-width="3.2" stroke-linecap="round"/>
+            <rect x="14" y="54" width="36" height="3.2" rx="1.6" fill="#C16E46"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">WIGEON PRODUCTIONS</span>
+          <span class="brand-sub">MUSIC &amp; AUDIO</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#portafolio" data-i18n="nav.portfolio">Portafolio</a>
+        <a href="#paquetes" data-i18n="nav.packages">Paquetes</a>
+        <a href="#proceso" data-i18n="nav.process">Proceso</a>
+        <a href="#martin" data-i18n="nav.about">Martín</a>
+        <a href="#cotizar" data-i18n="nav.quote">Cotizar</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+          <button type="button" class="lang-btn is-active" data-lang="es">ES</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <a href="#cotizar" class="btn btn-primary btn-sm nav-cta" data-i18n="nav.cta">Cotizar canción</a>
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú móvil -->
+    <div class="mobile-drawer" id="mobileDrawer" hidden>
+      <a href="#portafolio" data-i18n="nav.portfolio">Portafolio</a>
+      <a href="#paquetes" data-i18n="nav.packages">Paquetes</a>
+      <a href="#proceso" data-i18n="nav.process">Proceso</a>
+      <a href="#martin" data-i18n="nav.about">Martín</a>
+      <a href="#cotizar" class="btn btn-primary" data-i18n="nav.cta">Cotizar canción</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO: Posicionamiento + Audio reproducible inmediato -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-scrim" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            <span data-i18n="hero.eyebrow">POP · R&amp;B · FUNK · JAZZ · PRODUCCIÓN MUSICAL</span>
+          </div>
+
+          <h1 class="hero-title" data-i18n="hero.title">
+            DE NOTA DE VOZ A CANCIÓN LISTA PARA SPOTIFY
+          </h1>
+
+          <p class="hero-lead" data-i18n="hero.lead">
+            Producción musical, arreglos, bajo en vivo y mezcla para artistas de <strong>Pop, R&amp;B, Funk y Jazz</strong>. Combino formación en ingeniería de sonido y musicalidad real para que tu proyecto tenga groove, carácter y claridad comercial.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#portafolio" class="btn btn-primary btn-lg">
+              <span data-i18n="hero.ctaListen">Escuchar Portafolio</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#cotizar" class="btn btn-ghost btn-lg" data-i18n="hero.ctaQuote">
+              Cotizar mi proyecto
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-label" data-i18n="hero.metaLocLabel">Modalidad</span>
+              <span class="meta-value" data-i18n="hero.metaLocValue">Remoto Mundial (ES/EN) · Zipaquirá / Bogotá</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label" data-i18n="hero.metaCredLabel">Trayectoria</span>
+              <span class="meta-value" data-i18n="hero.metaCredValue">Spotify · YouTube · 2.º Lugar GENFEST 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reproductor destacado inmediato (sin salir de la web) -->
+        <aside class="hero-player-card" aria-label="Reproductor destacado">
+          <div class="player-card-top">
+            <div>
+              <span class="mono-tag" data-i18n="hero.playerTag">ESCUCHA INMEDIATA · PRODUCCIÓN COMPLETA</span>
+              <h2 class="player-card-title">Paula Bail — 5 Minutos Más</h2>
+            </div>
+            <span class="eq-bars" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </span>
+          </div>
+
+          <div class="spotify-embed-wrap">
+            <iframe
+              style="border-radius:12px"
+              src="https://open.spotify.com/embed/track/5onWCv4FoqZCsAH7SjItfY?utm_source=generator&theme=0"
+              width="100%"
+              height="152"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="eager"
+              title="Paula Bail - 5 Minutos Más en Spotify">
+            </iframe>
+          </div>
+
+          <div class="player-card-footer">
+            <p data-i18n="hero.playerDesc">
+              Producción completa, dirección creativa, arreglos, grabación y mezcla.
+            </p>
+            <div class="quick-tracks">
+              <a href="#track-paco-planetas-quiereme" class="quick-chip">▶ Quiéreme · Paco Planetas</a>
+              <a href="#track-milandi-body-and-soul" class="quick-chip">▶ Body &amp; Soul · Jazz/Bajo</a>
+              <a href="#track-swey-some-love" class="quick-chip">▶ Some Love · Swey</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Banda de credenciales / Diferenciadores -->
+    <section class="proof-strip">
+      <div class="container proof-grid">
+        <div class="proof-item">
+          <span class="proof-num">01</span>
+          <div>
+            <strong data-i18n="proof.p1Title">Ingeniería + Musicalidad</strong>
+            <p data-i18n="proof.p1Desc">No son beats genéricos reciclados: armonía real, bajo eléctrico en vivo y criterios técnicos de ingeniería de sonido.</p>
+          </div>
+        </div>
+        <div class="proof-item">
+          <span class="proof-num">02</span>
+          <div>
+            <strong data-i18n="proof.p2Title">100% Remoto o Presencial</strong>
+            <p data-i18n="proof.p2Desc">Flujo remoto ágil en español e inglés, o sesiones presenciales de voces e instrumentos en Zipaquirá / Sabana de Bogotá.</p>
+          </div>
+        </div>
+        <div class="proof-item">
+          <span class="proof-num">03</span>
+          <div>
+            <strong data-i18n="proof.p3Title">Batería Híbrida o Acústica Real</strong>
+            <p data-i18n="proof.p3Desc">Baterías modernas con pocket orgánico incluidas, más opción de baterista de sesión en vivo para Funk, Jazz o Pop.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTAFOLIO INTERACTIVO -->
+    <section class="section" id="portafolio">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker" data-i18n="portfolio.kicker">TRABAJOS SELECCIONADOS</span>
+            <h2 class="section-title" data-i18n="portfolio.title">ESCUCHA EL PORTAFOLIO</h2>
+          </div>
+          <p class="section-subtitle" data-i18n="portfolio.subtitle">
+            Reproduce mis producciones, grabaciones y mezclas directamente aquí sin salir de la página.
+          </p>
+        </div>
+
+        <div class="filter-bar" role="tablist" aria-label="Filtrar portafolio">
+          <button type="button" class="filter-btn is-active" data-filter="all" data-i18n="portfolio.filterAll">Todos (9)</button>
+          <button type="button" class="filter-btn" data-filter="production" data-i18n="portfolio.filterProd">Producción (6)</button>
+          <button type="button" class="filter-btn" data-filter="mixing" data-i18n="portfolio.filterMix">Mezcla &amp; Grabación (2)</button>
+          <button type="button" class="filter-btn" data-filter="transcription" data-i18n="portfolio.filterTrans">Transcripción (1)</button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+          <!-- Renderizado dinámicamente desde data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PAQUETES DE PRODUCCIÓN Y PRECIOS ORIENTATIVOS -->
+    <section class="section section-alt" id="paquetes">
+      <div class="container">
+        <div class="section-header section-header-row">
+          <div>
+            <span class="section-kicker" data-i18n="packages.kicker">OFERTA CLARA Y TRANSPARENTE</span>
+            <h2 class="section-title" data-i18n="packages.title">PAQUETES DE PRODUCCIÓN</h2>
+            <p class="section-subtitle" data-i18n="packages.subtitle">
+              Precios orientativos de partida. Cada canción tiene sus propias necesidades: elige un punto de partida y ajustamos el presupuesto exacto a tu proyecto.
+            </p>
+          </div>
+
+          <div class="currency-switch" role="group" aria-label="Moneda">
+            <span class="currency-label" data-i18n="packages.currencyLabel">Moneda:</span>
+            <button type="button" class="curr-btn is-active" data-currency="COP">COP $</button>
+            <button type="button" class="curr-btn" data-currency="USD">USD $</button>
+          </div>
+        </div>
+
+        <div class="packages-grid" id="packagesGrid">
+          <!-- Renderizado dinámicamente desde data.js -->
+        </div>
+
+        <!-- Extras opcionales (Batería acústica real, Partitura DNDA, Voces en Zipaquirá) -->
+        <div class="addons-panel">
+          <div class="addons-header">
+            <h3 data-i18n="packages.addonsTitle">EXTRAS OPCIONALES PARA POTENCIAR TU PRODUCCIÓN</h3>
+            <p data-i18n="packages.addonsSub">Agrégales a cualquier paquete según lo que pida tu canción.</p>
+          </div>
+          <div class="addons-grid" id="addonsGrid">
+            <!-- Renderizado dinámicamente desde data.js -->
+          </div>
+        </div>
+
+        <!-- Servicios técnicos complementarios -->
+        <div class="secondary-services">
+          <div class="secondary-header">
+            <span class="section-kicker" data-i18n="secondary.kicker">OTRAS ÁREAS DE WIGEON</span>
+            <h3 data-i18n="secondary.title">SERVICIOS TÉCNICOS &amp; COMPLEMENTARIOS</h3>
+          </div>
+          <div class="secondary-grid" id="secondaryGrid">
+            <!-- Renderizado dinámicamente desde data.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO DE TRABAJO (4 PASOS CLAROS) -->
+    <section class="section" id="proceso">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker" data-i18n="process.kicker">CÓMO TRABAJAMOS</span>
+            <h2 class="section-title" data-i18n="process.title">TU CANCIÓN EN 4 PASOS SIMPLES</h2>
+          </div>
+          <p class="section-subtitle" data-i18n="process.subtitle">
+            Un proceso transparente y sin sorpresas para que disfrutes crear tu música y sepas exactamente qué esperar en cada etapa.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <span class="step-num">01</span>
+            <h3 data-i18n="process.s1Title">Maqueta y Referencias</h3>
+            <p data-i18n="process.s1Desc">Me envías tu nota de voz, demo en guitarra/piano o pistas, más 1–2 referencias en Spotify. Definimos estética, tempo, tono y cotización exacta.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-num">02</span>
+            <h3 data-i18n="process.s2Title">Pre-producción y Groove</h3>
+            <p data-i18n="process.s2Desc">Con el 50% de anticipo construyo la estructura, armonía y maqueta de producción para que apruebes el vibe antes de cerrar detalles.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-num">03</span>
+            <h3 data-i18n="process.s3Title">Grabación y Producción</h3>
+            <p data-i18n="process.s3Desc">Grabamos instrumentos reales (bajo eléctrico, guitarras, teclados) y voces — presencialmente en Zipaquirá o de forma remota con mi guía técnica.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-num">04</span>
+            <h3 data-i18n="process.s4Title">Mezcla, Revisiones y Entrega</h3>
+            <p data-i18n="process.s4Desc">Hacemos la mezcla y mastering con tus rondas de revisión. Al quedar 100% feliz, completas el 50% restante y recibes todos los WAV y stems listos para lanzar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MARTÍN -->
+    <section class="section section-alt" id="martin">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <div class="studio-gallery">
+            <figure class="studio-frame studio-frame-main">
+              <img src="assets/studio-real-overhead.jpg" alt="Vista general del Home Studio de WIGEON PRODUCTIONS en Zipaquirá" class="about-photo about-photo-wide" loading="lazy" />
+              <figcaption class="studio-badge">
+                <span class="mono-tag">HOME STUDIO · ZIPAQUIRÁ</span>
+                <strong>WIGEON Setup · Pro Tools &amp; Monitoreo</strong>
+              </figcaption>
+            </figure>
+            <figure class="studio-frame studio-frame-secondary">
+              <img src="assets/studio-real-bass.jpg" alt="Teclado M-Audio Keystation 88 y bajo eléctrico en el estudio de WIGEON PRODUCTIONS" class="about-photo about-photo-tall" loading="lazy" />
+              <figcaption class="studio-badge studio-badge-compact">
+                <span class="mono-tag">INSTRUMENTOS &amp; GROOVE</span>
+                <strong>Bajo Eléctrico · Keystation 88</strong>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <span class="section-kicker" data-i18n="about.kicker">FUNDADOR DE WIGEON</span>
+          <h2 class="section-title" data-i18n="about.title">HOLA, SOY MARTÍN</h2>
+          <p class="about-role" data-i18n="about.role">Ingeniero de Sonido · Músico Multiinstrumentista · Productor Musical</p>
+
+          <p data-i18n="about.p1">
+            Mi trabajo nace de unir dos mundos que normalmente van separados: la formación técnica como <strong>ingeniero de sonido</strong> y la sensibilidad de toda una vida como <strong>músico multiinstrumentista</strong>.
+          </p>
+          <p data-i18n="about.p2">
+            En WIGEON me enfoco en ayudar a artistas independientes de <strong>Pop, R&amp;B, Funk y Jazz</strong> a llevar sus ideas desde una simple grabación en el celular hasta canciones terminadas con groove auténtico, arreglos con identidad y sonido competitivo para plataformas digitales.
+          </p>
+          <p data-i18n="about.p3">
+            Trabajo desde mi home studio en <strong>Zipaquirá (Sabana de Bogotá)</strong> colaborando tanto presencialmente con artistas de la región como de forma 100% remota con músicos de toda Latinoamérica, Estados Unidos y Europa.
+          </p>
+
+          <div class="about-links">
+            <a href="https://www.instagram.com/wigeon_productions/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              Instagram @wigeon_productions
+            </a>
+            <a href="https://www.instagram.com/wigeonb/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+              @wigeonb (Personal)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section class="section" id="faq">
+      <div class="container container-narrow">
+        <div class="section-header">
+          <div>
+            <span class="section-kicker" data-i18n="faq.kicker">DUDAS FRECUENTES</span>
+            <h2 class="section-title" data-i18n="faq.title">ANTES DE EMPEZAR</h2>
+          </div>
+        </div>
+        <div class="faq-list" id="faqList">
+          <!-- Renderizado dinámicamente desde data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- COTIZADOR INTERACTIVO & CONTACTO -->
+    <section class="section section-cta" id="cotizar">
+      <div class="container quote-grid">
+        <div class="quote-intro">
+          <span class="section-kicker" data-i18n="quote.kicker">EMPECEMOS TU PROYECTO</span>
+          <h2 class="section-title" data-i18n="quote.title">COTIZA TU CANCIÓN SIN COMPROMISO</h2>
+          <p data-i18n="quote.lead">
+            Cuéntame qué tienes en mente. Selecciona el paquete y los extras que te interesan para ver un estimado orientativo y enviarme tu resumen directo por WhatsApp en un clic.
+          </p>
+
+          <div class="direct-channels">
+            <a href="https://wa.me/573125710446" target="_blank" rel="noopener noreferrer" class="channel-card">
+              <span class="channel-icon" aria-hidden="true">💬</span>
+              <div>
+                <strong>WhatsApp Directo</strong>
+                <span>+57 312 571 0446</span>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/wigeon_productions/" target="_blank" rel="noopener noreferrer" class="channel-card">
+              <span class="channel-icon" aria-hidden="true">📸</span>
+              <div>
+                <strong>Instagram DM</strong>
+                <span>@wigeon_productions</span>
+              </div>
+            </a>
+            <a href="tel:+573125710446" class="channel-card">
+              <span class="channel-icon" aria-hidden="true">📞</span>
+              <div>
+                <strong data-i18n="quote.callLabel">Llamada / Colombia</strong>
+                <span>+57 312 571 0446</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <form class="quote-form" id="quoteForm">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="artistName" data-i18n="quote.nameLabel">Tu nombre o proyecto artístico *</label>
+              <input type="text" id="artistName" name="artistName" required placeholder="Ej. Sofía M. / Banda" />
+            </div>
+            <div class="form-field">
+              <label for="artistGenre" data-i18n="quote.genreLabel">Género principal</label>
+              <select id="artistGenre" name="artistGenre">
+                <option value="Pop / Indie Pop">Pop / Indie Pop</option>
+                <option value="R&B / Neo-Soul">R&amp;B / Neo-Soul</option>
+                <option value="Funk / Groove">Funk / Groove</option>
+                <option value="Jazz / Fusión">Jazz / Fusión</option>
+                <option value="Otro género">Otro / Fusión</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="serviceSelect" data-i18n="quote.serviceLabel">¿Qué servicio necesitas?</label>
+            <select id="serviceSelect" name="serviceSelect">
+              <!-- Poblado dinámicamente -->
+            </select>
+          </div>
+
+          <fieldset class="form-fieldset">
+            <legend data-i18n="quote.addonsLabel">Extras opcionales</legend>
+            <div class="checkbox-list" id="quoteAddonsList">
+              <!-- Poblado dinámicamente -->
+            </div>
+          </fieldset>
+
+          <div class="form-field">
+            <label for="demoLink" data-i18n="quote.demoLabel">Link a tu maqueta o referencia en Spotify (opcional)</label>
+            <input type="url" id="demoLink" name="demoLink" placeholder="https://open.spotify.com/... o Drive / SoundCloud" />
+          </div>
+
+          <div class="form-field">
+            <label for="projectNotes" data-i18n="quote.notesLabel">Cuéntame brevemente sobre tu canción</label>
+            <textarea id="projectNotes" name="projectNotes" rows="3" placeholder="Tengo una nota de voz con guitarra y busco un sonido tipo..." ></textarea>
+          </div>
+
+          <div class="estimate-box">
+            <div>
+              <span class="estimate-label" data-i18n="quote.estimateLabel">Estimado orientativo:</span>
+              <strong class="estimate-value" id="estimateValue">$1.100.000 COP</strong>
+            </div>
+            <span class="estimate-note" data-i18n="quote.estimateNote">50% anticipo · 50% entrega final</span>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary btn-lg btn-full">
+              <span data-i18n="quote.submitWA">Enviar cotización por WhatsApp</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+            <button type="button" class="btn btn-ghost btn-full" id="copyBriefBtn" data-i18n="quote.copyBtn">
+              Copiar resumen (para Instagram DM o correo)
+            </button>
+          </div>
+          <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <strong>WIGEON PRODUCTIONS</strong>
+        <span data-i18n="footer.tagline">Music &amp; Audio · Pop · R&amp;B · Funk · Jazz</span>
+      </div>
+      <div class="footer-links">
+        <a href="#portafolio" data-i18n="nav.portfolio">Portafolio</a>
+        <a href="#paquetes" data-i18n="nav.packages">Paquetes</a>
+        <a href="https://www.instagram.com/wigeon_productions/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://wa.me/573125710446" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+      <p class="footer-copy">© <span id="currentYear"></span> WIGEON PRODUCTIONS · Zipaquirá, Colombia</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
