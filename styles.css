@@ -101,13 +101,22 @@ button, input, select, textarea {
 }
 
 .brand-mark {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 9px;
   overflow: hidden;
   flex-shrink: 0;
+  background: #f4f1ec;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .brand-text {
@@ -690,6 +699,30 @@ button, input, select, textarea {
   aspect-ratio: 16 / 9;
 }
 
+.track-cover-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #0c0c0e;
+  border-bottom: 1px solid var(--border);
+}
+
+.track-cover-tall {
+  aspect-ratio: 4 / 3;
+}
+
+.track-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 0.35s ease;
+}
+
+.track-card:hover .track-cover {
+  transform: scale(1.03);
+}
+
 /* Reproductor inline bajo demanda para Google Drive / Audio local */
 .inline-audio-box {
   padding: 0.9rem;
@@ -1103,11 +1136,86 @@ button, input, select, textarea {
   align-items: center;
 }
 
-.studio-gallery {
+.martin-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.carousel-stage {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-card);
+}
+
+.carousel-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: rgba(14, 14, 15, 0.78);
+  color: var(--text);
+  font-size: 1.5rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 0.2s ease, border-color 0.2s ease;
+  z-index: 3;
+}
+
+.carousel-nav:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.carousel-prev { left: 0.75rem; }
+.carousel-next { right: 0.75rem; }
+
+.carousel-thumbs {
   display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  gap: 1rem;
-  align-items: stretch;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.carousel-thumb {
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg-card);
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  opacity: 0.62;
+  transition: opacity 0.2s ease, border-color 0.2s ease, transform 0.16s ease;
+}
+
+.carousel-thumb:hover {
+  opacity: 0.9;
+}
+
+.carousel-thumb.is-active {
+  opacity: 1;
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.carousel-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .studio-frame {
@@ -1118,28 +1226,6 @@ button, input, select, textarea {
   border: 1px solid var(--border-strong);
   box-shadow: var(--shadow-lg);
   background: var(--bg-card);
-  transition: border-color 0.25s ease, transform 0.25s ease;
-}
-
-.studio-frame:hover {
-  border-color: var(--accent-border);
-  transform: translateY(-2px);
-}
-
-.about-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.about-photo-wide {
-  aspect-ratio: 4 / 3;
-}
-
-.about-photo-tall {
-  aspect-ratio: 3 / 4;
-  object-position: center 65%;
 }
 
 .studio-badge {
@@ -1161,10 +1247,6 @@ button, input, select, textarea {
 .studio-badge strong {
   font-size: 0.88rem;
   color: var(--text);
-}
-
-.studio-badge-compact strong {
-  font-size: 0.82rem;
 }
 
 .about-role {

@@ -80,6 +80,7 @@ window.WIGEON_DATA = {
       artist: "Milandí",
       year: "Studio Session",
       mediaType: "drive",
+      cover: "assets/covers/milandi.jpg",
       driveId: "1j63XdUd_0Yaqi4JbUDl-kvqGTmoRg1Z1",
       localAudio: "",
       externalUrl: "https://drive.google.com/file/d/1j63XdUd_0Yaqi4JbUDl-kvqGTmoRg1Z1/view",
@@ -100,6 +101,7 @@ window.WIGEON_DATA = {
       artist: "Paula Bail",
       year: "Production Excerpt",
       mediaType: "drive",
+      cover: "assets/covers/paula-bail.jpg",
       driveId: "1lS874wCPHzPPxwaB7cVusNyu4nUTA4yW",
       localAudio: "",
       externalUrl: "https://drive.google.com/file/d/1lS874wCPHzPPxwaB7cVusNyu4nUTA4yW/view",
@@ -120,6 +122,7 @@ window.WIGEON_DATA = {
       artist: "Swey",
       year: "Production Excerpt",
       mediaType: "drive",
+      cover: "assets/covers/swey.jpg",
       driveId: "1R2tcn-GqTsFbY4t2_J8eoqQCvxBxNoNj",
       localAudio: "",
       externalUrl: "https://drive.google.com/file/d/1R2tcn-GqTsFbY4t2_J8eoqQCvxBxNoNj/view",
@@ -140,6 +143,7 @@ window.WIGEON_DATA = {
       artist: "Swey",
       year: "Production Excerpt",
       mediaType: "drive",
+      cover: "assets/covers/swey.jpg",
       driveId: "1nO8D4p0TeXSk5SjPq0TdPMtP-dwNBfNS",
       localAudio: "",
       externalUrl: "https://drive.google.com/file/d/1nO8D4p0TeXSk5SjPq0TdPMtP-dwNBfNS/view",
@@ -160,6 +164,7 @@ window.WIGEON_DATA = {
       artist: "Canción Original · GENFEST 2023",
       year: "Award · 2nd Place",
       mediaType: "drive",
+      cover: "assets/covers/bonds-of-hope.jpg",
       driveId: "1cBoH26b__kA-DXJV14WpEpE6r1r5asxQ",
       localAudio: "",
       externalUrl: "https://drive.google.com/file/d/1cBoH26b__kA-DXJV14WpEpE6r1r5asxQ/view",
@@ -180,6 +185,7 @@ window.WIGEON_DATA = {
       artist: "Mayelé",
       year: "Unreleased Recording",
       mediaType: "drive",
+      cover: "assets/covers/mayele.jpg",
       driveId: "1aLqiOVLEUp7i0NWdxP5YpVZZAKI652mh",
       localAudio: "",
       externalUrl: "https://drive.google.com/file/d/1aLqiOVLEUp7i0NWdxP5YpVZZAKI652mh/view",
@@ -200,6 +206,7 @@ window.WIGEON_DATA = {
       artist: "Joseg",
       year: "Full Album Transcription",
       mediaType: "external",
+      cover: "assets/covers/joseg.jpg",
       externalUrl: "https://www.instagram.com/josegsoy/",
       externalLabelES: "Visitar a @josegsoy",
       externalLabelEN: "Visit @josegsoy",
@@ -365,6 +372,60 @@ window.WIGEON_DATA = {
       descEN: "Acoustic measurement, diagnostics, and system tuning for home studios, live music venues, churches, and spaces (on-site in Bogotá / Sabana area).",
       startingCOP: "Desde $400.000 COP",
       startingEN: "On-site (Colombia) / Remote Studio Consult $80 USD"
+    }
+  ],
+
+  /**
+   * GALERÍA DE MARTÍN Y HOME STUDIO (Sección "Hola, soy Martín")
+   */
+  martinGallery: [
+    {
+      src: "assets/martin/martin-1.jpg",
+      pos: "center 22%",
+      tagES: "MARTÍN · FUNDADOR DE WIGEON",
+      tagEN: "MARTÍN · FOUNDER OF WIGEON",
+      captionES: "Ingeniero de sonido y productor musical en sesión",
+      captionEN: "Sound engineer & music producer at the desk"
+    },
+    {
+      src: "assets/studio-real-overhead.jpg",
+      pos: "center center",
+      tagES: "HOME STUDIO · ZIPAQUIRÁ",
+      tagEN: "HOME STUDIO · ZIPAQUIRÁ",
+      captionES: "Setup WIGEON · Pro Tools, monitoreo y Keystation 88",
+      captionEN: "WIGEON Setup · Pro Tools, monitors & Keystation 88"
+    },
+    {
+      src: "assets/martin/martin-3.jpg",
+      pos: "center 18%",
+      tagES: "EN VIVO · BAJO & GUITARRA",
+      tagEN: "LIVE STAGE · BASS & GUITAR",
+      captionES: "Interpretación en vivo y musicalidad real",
+      captionEN: "Live performance & real musicianship"
+    },
+    {
+      src: "assets/studio-real-bass.jpg",
+      pos: "center 60%",
+      tagES: "INSTRUMENTOS & GROOVE",
+      tagEN: "INSTRUMENTS & GROOVE",
+      captionES: "Bajo eléctrico real y teclas en el estudio",
+      captionEN: "Live electric bass & keys in-studio"
+    },
+    {
+      src: "assets/martin/martin-2.jpg",
+      pos: "center 25%",
+      tagES: "ARMONÍA & ARREGLOS",
+      tagEN: "HARMONY & ARRANGEMENT",
+      captionES: "Composición y arreglos al piano",
+      captionEN: "Composition & arrangements on piano"
+    },
+    {
+      src: "assets/martin/martin-4.jpg",
+      pos: "center 25%",
+      tagES: "GRABACIÓN EN ESTUDIO",
+      tagEN: "STUDIO RECORDING",
+      captionES: "Sesión de grabación con ensamble acústico",
+      captionEN: "Acoustic ensemble studio recording session"
     }
   ],
 

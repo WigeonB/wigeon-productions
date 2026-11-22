@@ -278,14 +278,19 @@
           </iframe>
         `;
       } else if (item.mediaType === "drive") {
+        const coverHTML = item.cover
+          ? `<div class="track-cover-wrap"><img src="${item.cover}" alt="${item.artist} - ${item.title}" class="track-cover" loading="lazy" /></div>`
+          : "";
         if (item.localAudio) {
           mediaHTML = `
+            ${coverHTML}
             <div class="inline-audio-box">
               <audio class="native-audio" controls preload="none" src="${item.localAudio}"></audio>
             </div>
           `;
         } else {
           mediaHTML = `
+            ${coverHTML}
             <div class="inline-audio-box" data-drive-container="${item.driveId}">
               <button type="button" class="inline-play-btn" data-drive-play="${item.driveId}" data-track-title="${item.artist} - ${item.title}">
                 <span class="play-circle" aria-hidden="true">▶</span>
@@ -298,15 +303,28 @@
           `;
         }
       } else {
-        mediaHTML = `
-          <div class="transcription-banner">
-            <span class="transcription-icon" aria-hidden="true">🎼</span>
-            <div>
-              <strong>${t("play.transTitle")}</strong>
-              <span>${t("play.transSub")}</span>
+        mediaHTML = item.cover
+          ? `
+            <div class="track-cover-wrap track-cover-tall">
+              <img src="${item.cover}" alt="${item.artist} - ${item.title}" class="track-cover" loading="lazy" />
             </div>
-          </div>
-        `;
+            <div class="transcription-banner">
+              <span class="transcription-icon" aria-hidden="true">🎼</span>
+              <div>
+                <strong>${t("play.transTitle")}</strong>
+                <span>${t("play.transSub")}</span>
+              </div>
+            </div>
+          `
+          : `
+            <div class="transcription-banner">
+              <span class="transcription-icon" aria-hidden="true">🎼</span>
+              <div>
+                <strong>${t("play.transTitle")}</strong>
+                <span>${t("play.transSub")}</span>
+              </div>
+            </div>
+          `;
       }
 
       return `
@@ -548,6 +566,54 @@
     ].filter(Boolean).join("\n");
   }
 
+  let activeSlide = 0;
+
+  function renderMartinCarousel() {
+    const slides = DATA.martinGallery || [];
+    if (!slides.length) return;
+    const current = slides[activeSlide];
+    const img = document.getElementById("carouselMainImg");
+    const tag = document.getElementById("carouselTag");
+    const cap = document.getElementById("carouselCaption");
+    const thumbs = document.getElementById("carouselThumbs");
+
+    if (img) {
+      img.src = current.src;
+      img.style.objectPosition = current.pos || "center center";
+      img.alt = currentLang === "en" ? current.captionEN : current.captionES;
+    }
+    if (tag) tag.textContent = currentLang === "en" ? current.tagEN : current.tagES;
+    if (cap) cap.textContent = currentLang === "en" ? current.captionEN : current.captionES;
+
+    if (thumbs) {
+      thumbs.innerHTML = slides.map((s, idx) => `
+        <button type="button" class="carousel-thumb ${idx === activeSlide ? "is-active" : ""}" data-slide="${idx}" aria-label="${currentLang === "en" ? s.captionEN : s.captionES}">
+          <img src="${s.src}" alt="" loading="lazy" style="object-position:${s.pos || "center center"}" />
+        </button>
+      `).join("");
+      thumbs.querySelectorAll("[data-slide]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          activeSlide = Number(btn.getAttribute("data-slide"));
+          renderMartinCarousel();
+        });
+      });
+    }
+  }
+
+  document.getElementById("carouselPrev")?.addEventListener("click", () => {
+    const len = (DATA.martinGallery || []).length;
+    if (!len) return;
+    activeSlide = (activeSlide - 1 + len) % len;
+    renderMartinCarousel();
+  });
+
+  document.getElementById("carouselNext")?.addEventListener("click", () => {
+    const len = (DATA.martinGallery || []).length;
+    if (!len) return;
+    activeSlide = (activeSlide + 1) % len;
+    renderMartinCarousel();
+  });
+
   function renderAll() {
     applyTranslations();
     renderPortfolio();
@@ -556,6 +622,7 @@
     renderSecondaryServices();
     renderFAQ();
     renderServiceSelect();
+    renderMartinCarousel();
     updateEstimate();
   }
 
